@@ -40,6 +40,18 @@ a {
   font-size: 2rem;
 }
 
+section#entertainment {
+  background: url(../img/section-bg.jpg) no-repeat bottom/cover;
+  padding: 10rem 0;
+}
+
+.gift-cards{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+}
+
 /* Showcase */
 #showcase {
   margin:0;
@@ -64,6 +76,32 @@ a {
   font-size: 2rem;
 }
 
+/* Footer */
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  background: #333;
+  padding: 1rem;
+}
+
 /*Utility classes */
 .container {
   max-width: 1180ps;
@@ -74,6 +112,10 @@ a {
 
 .lead {
   font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Buttons */
@@ -111,7 +153,10 @@ a {
   color:var(--light-color);
 }
 
-
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
 
 
 .mb{
@@ -174,7 +219,6 @@ nav a#openup {
     font-size: 1.5rem;
   }
 
-
   nav {
     height: auto;
     border-bottom: 0;
@@ -230,4 +274,21 @@ nav a#openup {
 
 .cf {
   zoom: 1;
+}
+
+@media screen and (max-width: 780px) {
+  .gift-cards{
+    grid-template-columns: 1fr;
+  }
+
+  footer .footer-cols {
+    display: none;
+  }
+
+}
+
+@media screen and (max-height: 580px) {
+  #showcase p.lead {
+    display: none;
+  }
 }
